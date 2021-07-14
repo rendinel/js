@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Arithmetic</title>
+</head>
+<body>
+
+  <script>
+
+      // Arithmetic operators
+      // ====================
+      // + - / * % ++ --
+
+      // 5 + 5 = 10;
+      // 5 - 5 = 0;
+      // 5 * 5 = 25;
+      // 5 / 5 = 1;
+      // 13 % 3 = 1; (remainder é il resto di 13 / 3 = 4 con il resto di 1)
+
+      var leftSchool = 16;
+      var age = 34;
+      var yearSinceSchool = age - leftSchool;
+      console.log(yearSinceSchool);
+      // operator precedence is the order in which the operation are performed, * and / have the precedence on + and -, if they have the same precedence the order goes from left to right, 
+      // if we want to give precedence to an operation we need to put through ();
+      var number = 10 + 10 * 2;
+      var numbers = (10 + 10) * 2;
+      console.log(number);
+      console.log(numbers);
+
+      // we also have increment ++ and decrement -- they add or subtract one the var;
+      number++;
+      console.log(number);
+      number--;
+      console.log(number);
+  </script>
+  
+</body>
+</html>
