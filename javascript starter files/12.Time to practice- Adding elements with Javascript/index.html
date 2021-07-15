@@ -8,16 +8,26 @@
 </head>
 <body>
 
-  <main>
+  <main id="main">
     <!-- Create the following elements using Javascript: -->
 
     <!-- <p>Hello, My name is Chris
     <img src="image.jpg"> -->
+    
+    <img>
   </main>
 
   <script>
+    var newElement = document.createElement('p');
+    var text = document.createTextNode('hello my name is slim shady');
+    newElement.appendChild(text);
 
+    var parent = document.getElementById('main');
+    parent.appendChild(newElement);
 
+    
+   
+    document.querySelectorAll('img')[0].setAttribute('src', 'image.jpg');
   </script>
   
 </body>

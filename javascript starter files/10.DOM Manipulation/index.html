@@ -8,9 +8,35 @@
 </head>
 <body>
 
+  <p class="hello">hello, <span id="userName">user</span></p>
+  <p class="hello">welcome back</p>
+  <img class="image">
+  <img  class="image">
 
   <script>
+    // we can use js to modify the dom
 
+    var name = "chris";
+    document.getElementById('userName').innerHTML = name;
+
+    document.getElementById('userName').style.color = 'red';
+    // when we use property with multiple words like font-size we need to write them with camel case
+    document.getElementById('userName').style.fontSize = '25px';
+
+    var text = document.getElementsByClassName('hello')[1].style.color = 'purple';
+
+    console.log(text);
+
+    document.getElementsByTagName('p')[0].innerHTML = 'changed';
+
+    //select only the first element on the page,inside parethesis we can select by tag(img),by id(#image) or by class(.image)
+    //document.querySelector('.image').setAttribute('src', 'image.jpg');
+
+    // querySelectorAll is used if we want to select multiple element with the same tag,id or class, turn an array and we can select which number we want to choose with [0]
+    // with setAttribute we can set attribute like src from javascript first value is what we want to set secnd value is how we want to set
+    document.querySelectorAll('.image')[0].setAttribute('src', 'image.jpg');
+
+    document.querySelectorAll('.image')[1].setAttribute('src', 'image.jpg');
   </script>
   
 </body>

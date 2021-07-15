@@ -15,6 +15,31 @@
 
   <script>
 
+    //used for testing purpose, it can overwrite all the existing content if used from the console 
+    // document.write('document write text');
+
+    //create element without text
+    var listItem = document.createElement('li');
+    //create text
+    var itemText = document.createTextNode('Bananas');
+    // add text to element
+    listItem.appendChild(itemText);
+    //select parent list
+    var list = document.getElementById('list');
+    // add new list item to list
+    list.appendChild(listItem);
+
+    // create grapes list item and replace pears
+    var newListItem = document.createElement('li');
+    var newItemText = document.createTextNode('Grapes');
+    newListItem.appendChild(newItemText);
+
+    var itemtoreplace = document.querySelectorAll('li')[1];
+    list.replaceChild(newListItem, itemtoreplace);
+
+
+    //remove item 
+    list.removeChild(newListItem);
   </script>
   
 </body>
