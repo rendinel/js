@@ -11,7 +11,30 @@
 
   <script>
 
-    
+    // the switch it's similiar to the else if ,but we can check as many conditions as we want,
+    // inside the parentesis we put want we want to verify, then we can create as many case as we want,
+    // we need to put a break to end the switch, we can run a code if either one of two more case is true by putting to case one after the other,
+    //the defaultit's a fallback if there isn't a condition that is true, the switch end with the first condition that is true
+
+    var food = 'pizza';
+
+    switch (food) {
+      case 'pizza' :
+      case 'pasta' :
+      alert('italian food is awesome');
+      break;
+
+      case 'pizza':
+      alert('pizza is the best');
+      break;
+
+      case 'bacon' :
+      alert('bacon is good');
+      break;
+
+      default:
+      alert('every food is great');
+    }
   </script>
   
 </body>

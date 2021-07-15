@@ -17,18 +17,26 @@
     var hungry = true;
     var craving = 'Pizza';
 
-    if(hungry) {
+    // if(hungry) {
       
-      if(craving === 'Pizza') {
-        alert('Gimme Pizza!!!');
-      } else {
-        alert("Let's get any food!")
-      }
+    //   if(craving === 'Pizza') {
+    //     alert('Gimme Pizza!!!');
+    //   } else if(craving === "chinese"){
+    //     alert("gime me chinese");
+    //   } else {
+    //     alert("Let's get any food!")
+    //   }
 
-    } else {
-      alert('Maybe later...');
+    // } else {
+    //   alert('Maybe later...');
+    // }
+
+    // && means and and run only if both are true
+    // || means or and run even if only one of the two is true
+    // ! means opposite of the value, !hungry is false
+    if(hungry || craving === "Pizza") {
+      alert("give me pizza");
     }
-
 
   </script>
   

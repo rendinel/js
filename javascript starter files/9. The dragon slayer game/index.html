@@ -10,6 +10,37 @@
 
   <script>
 
+    // var name = prompt('what is your name');
+    // var game = confirm("hello " + name + " would you like to play?");
+    
+    // if(game === true){
+    //   var number = Math.floor(Math.random() * 10) + 1;
+    //   if(number > 5){
+    //     alert('you slayed the dragon');
+    //   } else {
+    //     alert('the dragon eat you');
+    //   }
+    // } else {
+    //   alert('came back when you are braver');
+    // }
+
+    // math random generate a random number beetween 0 to 1
+    // math ceil arrotonda per eccesso, math floor arrotonda per difetto
+    var random = Math.ceil(Math.random() * 100);
+    var name = prompt("what is your name?");
+    var play = confirm("hello " + name + " would you like to play?")
+
+    if(play === true){
+      var battle = confirm("would you like to battle the dragon");
+      if(battle === true){
+        var result = random > 50 ? 'you slayed the dragon' : 'the dragon eat you';
+        alert(result);
+      } else{
+        alert('come back when you are brave enough');
+      } 
+    } else {
+        alert('came back when you feel like it');
+      }
 
   </script>
   
