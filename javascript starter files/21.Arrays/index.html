@@ -8,8 +8,25 @@
 </head>
 <body>
 
+  <div id="animals"></div>
+  <div id="animal"></div>
+  <div id="length"></div>
+
   <script>
 
+    //arrays like variable store data but they store multiple data,it can store even different type like string,number and boolean
+
+    var animals = ['cat','dog','tiger',42,true];
+    var animal = ['cat','dog','tiger',42,true];
+    
+    // THIS WAY WE PRINT ALL THE ARRAY
+    document.getElementById('animals').innerHTML = animals;
+
+    //this way we print only one position of the aray
+    document.getElementById('animal').innerHTML = animal[0];
+
+    //with .length we can print the length of the array
+    document.getElementById('length').innerHTML = animals.length;
 
   </script>
 </body>
