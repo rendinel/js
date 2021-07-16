@@ -11,13 +11,63 @@
   <p id="text"></p>
 
   <script>
+
+    // scopes determines where we have access to our variables,if we declare the var outside the function body we can access them from anywhere in the code, -
+    // var num1 = 5;    
+    // var num2 = 10;
+    // function multiply() {
+    //   document.getElementById('text').innerHTML = num1 * num2;
+    // }
+
+    // multiply();
+    // console.log(num1);
+
+    // if we write the variable inside the function they have local scope and we can access them only inside the function
+
+    // function multiply() {
+    //   var num1 = 5;    
+    //   var num2 = 10;
+    //   document.getElementById('text').innerHTML = num1 * num2;
+    // }
+
+    // multiply();
+    // console.log(num1);
+
+    // hoisting means javascript will move or hoist your variables and functions to the top of the current scope, above the code work because the code is read from top to bottom
+    // it work even if we call the function before creating it because the data are stored inside the memory so the browser stil know about the function
+      
+    // multiply(); 
+
+    // function multiply() {
+    // var num1 = 5;    
+    // var num2 = 10;
+    // document.getElementById('text').innerHTML = num1 * num2;
+    // }
+
     
-    function multiply() {
-      document.getElementById('text').innerHTML = num1 * num2;
-    }
+    // console.log(num1);
+    
+    // if we are using anonymnous function and call before declaring the function it will result into an error, because anonymous function are not hoisted or stored in memory are not hoisted, 
+    // instead named function declarations are stored in memory
+    // multiple(); 
 
-    multiply();
+    // var multiple = function() {
+    // var num1 = 5;    
+    // var num2 = 10;
+    // document.getElementById('text').innerHTML = num1 * num2;
+    // }
 
+    // this work because variable are hoisted and code read from top to bottom
+    // var x = 5;
+    // var y = 10;
+    // alert(x + ' | ' + y);
+
+    // this not work because only the declaration is stored inside the memory not the actual value, so the browser know the var y exist because is hoisted the declaration is stored but not the value ,so reading from top to bottom it doesen't know tha value of y
+    // to avoid these is better to always declare the variables at the top of the scope
+    var x = 5; //intialization we declare a var x and assign a value of 10 to it, declarationis when we create a var y without assign a value es.var y;
+    alert(x + ' | ' + y);
+    var y = 10; 
+    
   </script>
   
 </body>

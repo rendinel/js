@@ -12,11 +12,19 @@
 
   <script>
 
-    function hi() {
-      document.getElementById('text').innerHTML = 'Text from function';
+    // we can pass value to the function by passing data inside the () and are called arguments, in the functon () we create a variable that we can access inside the function
+    // function hi(name) {
+    //   document.getElementById('text').innerHTML = 'hi ' + name;
+    // }
+
+    // we can pass multiple arguments to the parameters, and when we call the function if we pass only onw we obtain NaN multiply(5), a function can't do is job properly if we don't pass al the data she need
+    function multiply(num1, num2){
+      // document.getElementById('text').innerHTML = num1 * num2;
+      return num1 * num2;
     }
 
-    hi();
+    // we can return the function and store inside a variable to reuse like we prefer
+     var multiple = multiply(5, 5);
 
   
   </script>

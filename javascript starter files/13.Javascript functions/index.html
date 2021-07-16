@@ -8,8 +8,27 @@
 </head>
 <body>
 
+  <p id="text"></p>
+
   <script>
-    // a function is a snippet of code that we can call when required,
+    // a function is a snippet of code that we can call when required,a set of task contained inside this function that we can can call every time we need it., we write function then we decide a name then ()
+    // and {} inside this we write the code we want to run, then we can invoke the function as many times as we want nameFunction()
+
+    // this is a named function
+    // function hi(){
+    //   alert('hi');
+    //   document.getElementById('text').innerHTML = 'text from hell';
+    // }
+
+    // this is an anonymous function where we assign the function to a variable
+    var hi = function(){
+      alert('hi');
+      document.getElementById('text').innerHTML = 'text from hell';
+    }
+
+    hi();
+    hi();
+
   </script>
   
 </body>

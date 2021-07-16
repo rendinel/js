@@ -6,17 +6,34 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Javascript events</title>
 </head>
-<body>
-
-  <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores unde dolore at perspiciatis, id soluta veniam illum libero earum. Minima autem mollitia dolores, similique officia impedit magnam cum accusamus corrupti?</p>
+<!-- <body onload="document.getElementById('text').innerHTML = 'changed'"> -->
+  <body>
+  <p onclick="changeFontSize()" id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores unde dolore at perspiciatis, id soluta veniam illum libero earum. Minima autem mollitia dolores, similique officia impedit magnam cum accusamus corrupti?</p>
 
   <script>
+    // js events let us decide what to do when this event happens (es.mouseover,click,load look on w3schooll dom events for more)
+    var textElement =  document.querySelector('p');
+    // textElement.addEventListener('click', function(){
+    //   document.getElementById('text').style.fontSize = '34px';
+    // });
+
+    // we can do with arrow function to
+    // textElement.addEventListener('click', () => {
+    //   document.getElementById('text').style.fontSize = '34px';
+    // });
+
+    // we can store the function away and call when we need it
 
     var changeFontSize = () => {
       document.getElementById('text').style.fontSize = '34px';
     }
+    textElement.addEventListener('click', changeFontSize);
 
-    changeFontSize();
+    // var changeFontSize = () => {
+    //   document.getElementById('text').style.fontSize = '34px';
+    // }
+
+   
 
   </script>
   

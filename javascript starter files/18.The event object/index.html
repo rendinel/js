@@ -11,14 +11,26 @@
   <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores unde dolore at perspiciatis, id soluta veniam illum libero earum. Minima autem mollitia dolores, similique officia impedit magnam cum accusamus corrupti?</p>
 
   <script>
-
+    // there are a lot of useful information that are passed to the event handler which is called the event object, this information is all about the events such as 
+    // what type of event it was , what element was triggered and a lot more information, if we pass element or e for short(e it's a convention it can be any name we choose) to the function ,
+    // it's a variable that holds of the events information, if we look inside the console we see it contain a lot of information, if we look for target is the event that dispatched the events
+    // in ou8r case it's p#text elemtn p with id text that caused all, we can look at it in the console console.log(e.target);.There are some mouse x and y position of where we triggered the event
     var textElement = document.querySelector('p');
 
-    var changeFontSize = () => {      
-      document.getElementById('text').style.fontSize = '34px';
+    // var changeFontSize = (e) => {      
+    //   console.log(e);
+    //   document.getElementById('text').style.fontSize = '34px';
+    // }
+
+    // textElement.addEventListener('click', changeFontSize);
+
+    // this way we can show the mouse position on the page
+    var changeFontSize = (e) => {      
+      console.log(e);
+      document.getElementById('text').innerHTML = e.clientX + '<br>' + e.clientY;
     }
 
-    textElement.addEventListener('click', changeFontSize);
+    textElement.addEventListener('mouseover', changeFontSize);
 
   </script>
   

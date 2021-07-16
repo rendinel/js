@@ -12,14 +12,27 @@
 
   <script>
 
-    var num1 = 5;
-    var num2 = 10;
+    // var num1 = 5;
+    // var num2 = 10;
 
-    var anonymousFunction = function() {
-      document.getElementById('text').innerHTML = num1 * num2;      
+    // var anonymousFunction = function() {
+    //   document.getElementById('text').innerHTML = num1 * num2;      
+    // }
+
+    // it's just a shorter version of the function
+    // var anonymousFunction = (num1, num2) => {
+    //   document.getElementById('text').innerHTML = num1 * num2;      
+    // }
+
+    // anonymousFunction(5,5);
+
+    // we can reduce the length of the code even more by not using () if we need to pass only one value
+
+    var anonymousFunction = num1 => {
+      document.getElementById('text').innerHTML = num1;      
     }
 
-    anonymousFunction();
+    anonymousFunction(5);
 
   </script>
   
