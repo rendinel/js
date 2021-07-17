@@ -7,7 +7,7 @@
   <title>Time to practice- Arrays</title>
 </head>
 <body>
-
+  <div id="test"></div>
   <div id="characters"></div>
 
   <script>
@@ -15,9 +15,16 @@
     // 1. Arrange elements into alphabetical order and store in a new variable
     // Hint - use array method .sort()
     var characters = ['Roger Rabbit', 'Jessica Rabbit', 'Daffy Duck', 'Bugs Bunny'];
+    var order = characters.sort();
+    document.getElementById('test').innerHTML = order;
 
     // 2. Return new array with each element having 'Name' prefix 
     // Eg. Name: Bugs Bunny, Name: Daffy Duck
+     
+    var newArray = characters.map(element => {
+      return 'Name: ' + element;
+    });
+    document.getElementById('characters').innerHTML = newArray;
 
     
   </script>

@@ -13,6 +13,21 @@
   <script>
     
     var animals = ['cat', 'dog', 'tiger', 'giraffe', 'lion'];
+    var toUpperCaseName = [];
+    // nameArray.forEach(function(variablenamewedecide){
+    // what we want to to with variablenamewedecide
+    // })
+
+    // animals.forEach(function(animal){
+    //   toUpperCaseName.push(animal.toUpperCase());
+    // });
+    
+    //with foreach we can access the position or the index number o
+    animals.forEach(function(animal, index){
+      toUpperCaseName.push(index+1 + ' - ' + animal.toUpperCase());
+    });
+
+    document.getElementById('animals').innerHTML = toUpperCaseName;
     
   </script>
 </body>

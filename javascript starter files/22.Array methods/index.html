@@ -15,22 +15,30 @@
     var animals = ['cat', 'dog', 'tiger', 'giraffe', 'lion'];
         
     // Shift (removes first element from array)
-
+    // animals.shift();
+    // var animal1 = animals.shift();
+    // console.log(animal1);
 
     // Unshift (adds element(s) to beginning of array)
+    // animals.unshift('leopard','bird');
 
 
     // Push (adds element(s) to end of array)
-
+    // animals.push('leopard','bird')
 
     // Pop (removes last element from array)
+    // animals.pop();
 
-
-    // Splice (Adds or removes elements at index number)
-
+    // Splice (Adds or removes elements at index number), it takes two value in the parenthesis the first is from where we want to delete and the second is where we want o end it
+    // animals.splice(2,2);
+    // if we add an element after the 2 number we can replace the removed item in the array or add more element by adding other element
+    // animals.splice(2,2,'fish','monkey');
+    // if we only put one value it will remove everything from the index till the end of the array
+    // animals.splice(2);
 
     // Reverse
-
+    animals.reverse();
+    // mozzilla array methods complete list
     document.getElementById('animals').innerHTML = animals;
   </script>
 </body>

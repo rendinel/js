@@ -13,10 +13,9 @@
   <script>
     
     var animals = ['cat', 'dog', 'tiger', 'giraffe', 'lion'];
-    var upperCaseNames = [];
-
-    animals.forEach(function(animal, index) {
-      upperCaseNames.push(index+1 + ' - ' + animal.toUpperCase());
+    // .map for like forEach but it return a new array, we don't need to write a empty array and full it with .push
+    var upperCaseNames = animals.map(function(animal) {
+      return animal.toUpperCase();
     });   
     
     document.getElementById('animals').innerHTML = upperCaseNames;

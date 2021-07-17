@@ -9,8 +9,32 @@
 <body>
 
   <script>
-     
-  
+     // objects are a collection of properties which have a name and a value pair, we create a new object and we assign some properties to it
+    //  var character = new Object();
+    //  character.firstname = 'Bugs';
+    //  character.lastname = 'Bunny';
+    //  character.image = 'bugs-bunny.png';
+    //  character.color = 'Grey';
+    //  console.log(character);
+
+    // this way we can create an object and assign property directly
+    var character = {
+      firstname : 'Bugs',
+      lastname : 'Bunny',
+      image : 'bugs-bunny.png',
+      color : ['grey', 'white'],
+      fullName : function(){
+        alert('My full name is ' + this.firstname + ' ' + this.lastname)
+      }
+    }
+     //there are 2 way to access property object
+     //dot notation
+    //  console.log(character.color);
+      //bracket
+     console.log(character['color']);
+      
+     character.fullName();
+
   </script>
 </body>
 </html>

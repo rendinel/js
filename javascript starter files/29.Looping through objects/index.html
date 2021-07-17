@@ -8,6 +8,8 @@
 </head>
 <body>
 
+  <div id="result"></div>
+
   <script>
      
     var character = {
@@ -17,6 +19,17 @@
       color: ['grey', 'white']
     };
     
+    var result = '';
+    // we can loop object by setting a variable we decide i in this case and looping the object, then we can access the property name with the character name, the data with character[i]
+    for (var i in character){
+      console.log(i);
+      console.log(character[i]);
+      console.log('---------');
+
+      result += i + ': ' + character[i] + '<br>';
+    }
+
+    document.getElementById('result').innerHTML = result;
   </script>
 </body>
 </html>

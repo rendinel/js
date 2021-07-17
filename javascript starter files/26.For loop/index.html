@@ -10,10 +10,36 @@
 
   <ul id="characters"></ul>
 
+  <img src="bugs-bunny.png">
+  <img src="daffy-duck.png">
+
   <script>
     
-    var characters = ['Roger Rabbit', 'Jessica Rabbit', 'Daffy Duck', 'Bugs Bunny'];
-  
+    var characters = ['Roger Rabbit', 'Jessica Rabbit', 'Daffy Duck', 'Bugs Bunny','Son Goku'];
+
+    var item = '';
+
+    // item += characters[0] + '<br>';
+    // item += characters[1] + '<br>';
+    // item += characters[2] + '<br>';
+    // item += characters[3] + '<br>';
+    // document.getElementById('characters').innerHTML = item;
+
+
+    // i = 0 is the initializer,then we put the condition that keep us looping as long as it is true, i++ is to add one to the value of i each timne till we end the loop, inside the code we put i instead of the number of the index characters[i] so it will run the code for all the array
+
+    for(var i = 0; i < characters.length ;i++){
+      item += '<li>' + characters[i] + '</li>' + '<br>'
+    };
+
+    document.getElementById('characters').innerHTML = item;
+
+    var images = document.querySelectorAll('img');
+    // queryselectorall turn an array og the 2 img so we can loop the img like an array,this code show us the src of the image in the console
+    for(var i = 0; i < images.length;i++){
+      console.log(images[i].getAttribute('src'));
+    }
+
   </script>
 </body>
 </html>

@@ -7,10 +7,26 @@
   <title>Object constructor function</title>
 </head>
 <body>
-
+  
 
   <script>
 
+// <!-- if we want to create multiple objects with the same properties we need to use the constructor function that allow us to create a template for the object that use the same structure,they start with a capital letter so we can distingue them from normal function -->
+// we create a function that take as parameter the property of the object we want to create and then we define the name of the property with this.nameProperty 
+function Character(first,last,color,image){
+  this.firstName = first;
+  this.lastName = last;
+  this.color = color;
+  this.image = image;
+};
+
+// we create a new Character(this name need to be the same of the template function) assign to a var e inside the parethesis we pass the data we defined inside the function
+var mickey = new Character('Mickey','Mouse',['red','yellow','black'],'mickey-mouse.png');
+console.log(mickey.color[0]);
+var donald = new Character('Donald','Duck',['white','yellow','blue'],'donald-duck.png');
+var bugs = new Character('Bugs','Bunny',['grey','white'],'bugs-bunny.png');
+console.log(bugs.lastName);
+console.log(donald.firstName);
   
   </script>
 </body>
