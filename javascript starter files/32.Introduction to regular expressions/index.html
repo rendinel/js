@@ -18,31 +18,38 @@
 
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat eaque recusandae saepe quam, quo dolorem animi similique numquam labore natus, cum exercitationem hic unde facere repudiandae. Repellendus commodi qui officiis!
   Deserunt, velit voluptatum veniam dicta libero impedit quas ullam itaque perferendis a ad omnis autem quos maxime hic cumque enim, tempora repellat! Error facere labore officiis fugiat excepturi eligendi eveniet.
-  Aliquam voluptatibus illum commodi minus at nam magnam laudantium corrupti sed eos doloribus modi quas nemo ea ut dolor incidunt porro consequuntur iste adipisci officiis voluptatum, repellat placeat? Quos, accusantium.
-  Corporis ratione illo officiis sint est, recusandae rerum tempora fugit alias corrupti adipisci possimus asperiores aliquam libero mollitia, magnam modi ex? Eius consectetur earum facilis ex vero doloremque alias asperiores?
-  Nisi iusto animi numquam ipsum, aliquam ad fuga harum necessitatibus eius, ut possimus. Modi consectetur nisi magni in voluptates sint maxime, recusandae, illo dolores quo hic dignissimos. Ipsa, ratione id!
-  Ullam repellat omnis nostrum eius adipisci dolorum aspernatur asperiores neque ad commodi, hic esse, cum cupiditate beatae quasi magni earum quis, unde voluptate sed! Eligendi labore quas ipsam nisi ullam.
+  Aliquam voluptatibus illum commodi minus at nam magnam 3 laudantium corrupti sed eos doloribus modi quas nemo ea ut dolor incidunt porro consequuntur iste adipisci officiis voluptatum, repellat placeat? Quos, accusantium.
+  Corporis 4 ratione illo officiis sint est, recusandae rerum tempora fugit alias corrupti adipisci possimus asperiores aliquam libero mollitia, magnam modi ex? Eius consectetur earum facilis ex vero doloremque alias asperiores?
+  Nisi iusto animi numquam ipsum, aliquam ad fuga harum necessitatibus eius, ut possimus. Modi 4 consectetur nisi magni in voluptates sint maxime, recusandae, illo dolores quo hic dignissimos. Ipsa, ratione id!
+  Ullam repellat omnis nostrum eius adipisci dolorum aspernatur asperiores neque ad commodi, hic esse, cum cupiditate 5 beatae quasi magni earum quis, unde voluptate sed! Eligendi labore quas ipsam nisi ullam.
   Optio magni accusamus exercitationem voluptatem expedita, quis eum fugiat veritatis qui tenetur odit debitis.</p>
   
   <script>
 
-    // returns the position of word in the string:
-
-    // Replace text with a string (case sensitive)
-
-    // Replace text with a regular expression, i modifier to perform case insensitive match
-
-    // i modifier = replaces first match only
-
-    // g modifier = replaces all matches
-
-
-    // Use square brackets to find any letter inside (first one only counts)
-
-    // Add g modifier to select all from letters inside of sq brackets
-
-    // Use square brackets to find any number inside (first one only counts)
+    //regex is a way to find a pattern or a combination of characters inside atext string, es.we can search for a word inside a text and change the first charcater to be a capital letter
+    let text = document.querySelector('p').innerHTML;
+    // returns the position of word in the string: first we the search method with say which word we are looking for and this will return the position in which it is
+    // let newText = text.search('amet');
     
+    // Replace text with a string (case sensitive),with .replace we replace the word we are looking for with another word we decide,it's case sensitive
+    // let newText = text.replace('Lorem','chips');
+    // Replace text with a regular expression, i modifier to perform case insensitive match like above but no case sensitive
+    // let newText = text.replace(/lorem/i,'chips');
+    // i modifier = replaces first match only replace the first letter encountered with the one we decided
+    // let newText = text.replace(/e/i,'A');
+    // g modifier = replaces all matches, g stands for global and replaces all the letter with the one we decided
+    // let newText = text.replace(/e/g,'A');
+
+    // Use square brackets to find any letter inside (first one only counts), replace the first of the three letter selected with the string
+    // let newText = text.replace(/[hgs]/,'**REPLACED**');
+    // Add g modifier to select all from letters inside of sq brackets, replace all the letter with the string, it work with number also
+    // let newText = text.replace(/[hgs]/g,'**REPLACED**');
+    // let newText = text.replace(/[3-6]/g,'**REPLACED**');
+    // Use square brackets to find any number inside (first one only counts)
+
+    // mozilla regular expression for more
+    
+    console.log(newText);
     
   </script>
 </body>

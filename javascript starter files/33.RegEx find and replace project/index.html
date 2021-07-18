@@ -27,7 +27,7 @@
       <input type="text" id="replace">
     </div>
 
-    <button id="replaceBtn">Replace!</button>
+    <button type="button" id="replaceBtn">Replace!</button>
   </form>
 
   <h3>Original text:</h3>
@@ -43,6 +43,23 @@
   <p></p>
   
   <script>
+
+    document.getElementById('replaceBtn').addEventListener('click',(e) => {
+      let originalText = document.querySelectorAll('p')[0];
+      let modifiedText = document.querySelectorAll('p')[1];
+
+      let findText = document.getElementById('find').value;
+      let replaceText = document.getElementById('replace').value;
+
+
+      let findWithModifier = new RegExp(findText,'i');
+      let newtext = originalText.innerHTML.replace(findWithModifier,replaceText);
+      modifiedText.innerHTML = newtext;
+
+      //we pass the event to our function and we prevent the default submot action,another way to stop this is to define the the type button to be button in the html instead of the default submit look at the button replace type="button"
+      // e.preventDefault();
+      
+    })
        
   
   </script>
